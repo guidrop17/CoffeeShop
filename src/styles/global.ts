@@ -12,13 +12,18 @@ export const GlobalStyles = createGlobalStyle(({ theme }) => ({
         boxShadow: "0",
     },
 
-    "header": {
-        background: theme.background,
-        fontFamily: 'Baloo 2, sans-serif',
-    },
-
     "body": {
         background: theme.background,
-        fontFamily: 'Roboto, sans-serif',
+        fontFamily: 'Baloo 2',
+    },
+    
+    // "body": {
+    //     background: theme.background,
+    //     fontFamily: 'Roboto, sans-serif',
+        
+    // },
+    
+    "h1, h2, h3": {
+        fontFamily: 'Baloo 2',
     },
 }))
