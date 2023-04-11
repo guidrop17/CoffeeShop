@@ -16,8 +16,8 @@ export const ContainerActions = styled.div(() => ({
 
 export const LocalizationInfo = styled.button.attrs({ type: "submit"})(({ theme }) => ({
     padding: '0.5rem 0.5rem',
-    background: theme['purple-light'],
-    color: theme['purple-dark'],
+    background: theme.color['purple-light'],
+    color: theme.color['purple-dark'],
     border: 'none',
     justifyContent: 'center',
     alignItems: 'center',

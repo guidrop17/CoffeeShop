@@ -1,29 +1,44 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle(({ theme }) => ({
-    "*": {
-        margin: "0",
-        padding: "0",
-        boxSizing: "border-box",
-    },
-
-    ":focus": {
-        outline: "0",
-        boxShadow: "0",
-    },
-
-    "body": {
-        background: theme.background,
-        fontFamily: 'Baloo 2',
-    },
-    
-    // "body": {
-    //     background: theme.background,
-    //     fontFamily: 'Roboto, sans-serif',
-        
-    // },
-    
-    "h1, h2, h3": {
-        fontFamily: 'Baloo 2',
-    },
-}))
+export const GlobalStyles = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+  }
+  body {
+    background: ${({ theme }) => theme.color["background"]};
+    color: ${({ theme }) => theme.color["base-text"]};
+    -webkit-font-smoothing: antialiased;
+  }
+  body, input, textarea, button {
+    font-family: ${({ theme }) => theme.fonts.regular};
+    font-weight: 400;
+    font-size: ${({ theme }) => theme.textSizes["text-regular-m"]}
+  }
+  button {
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  ::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.color["base-button"]}
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background: ${({ theme }) => theme.color["purple"]}
+  }
+`;

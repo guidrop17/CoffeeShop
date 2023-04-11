@@ -13,9 +13,10 @@ export const BannerContentText = styled.div(({}) => ({
     gap: '1rem',
 }))
 
-export const BannerTitle = styled.h1(() => ({
+export const BannerTitle = styled.h1(({ theme }) => ({
     fontSize: '3rem',
     lineHeight: '130%',
+    fontFamily: theme.fonts.title,
 }))
 
 export const BannerSubTitle = styled.p(() => ({
@@ -41,7 +42,7 @@ export const BannerContentBenefits = styled.div(({}) => ({
 }))
 
 export const BaseIcon = styled.div(({ theme }) => ({
-    color: theme.white,
+    color: theme.color.white,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
@@ -55,17 +56,17 @@ export const BaseIcon = styled.div(({ theme }) => ({
 }))
 
 export const YellowDarkIcon = styled(BaseIcon)(({ theme }) =>({
-    background: theme["yellow-dark"]
+    background: theme.color["yellow-dark"]
 }))
 
 export const YellowIcon = styled(BaseIcon)(({ theme }) =>({
-    background: theme.yellow
+    background: theme.color.yellow
 }))
 
 export const GrayIcon = styled(BaseIcon)(({ theme }) =>({
-    background: theme["base-text"]
+    background: theme.color["base-text"]
 }))
 
 export const PurpleIcon = styled(BaseIcon)(({ theme }) =>({
-    background: theme.purple
+    background: theme.color.purple
 }))

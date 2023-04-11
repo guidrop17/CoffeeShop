@@ -1,23 +1,23 @@
-import { createContext, ReactNode, useReducer } from 'react';
-import { SubstractAmountForItemInCartAction, SumAmountForItemInCartAction } from '../reducers/actions';
-import { Item, ItemsReducer } from '../reducers/reducer';
+// import { createContext, ReactNode, useReducer, useState } from 'react';
+// import { SubstractAmountForItemInCartAction, SumAmountForItemInCartAction } from '../reducers/actions';
+// import { Item, ItemsReducer } from '../reducers/reducer';
+// import { Coffee } from '../components/Products';
 
-interface itemsContext{
-    items: Item[]
-    amount: number
-}
+// interface Cartitems extends Coffee {
+//     amount: number
+// }
 
-interface ContextProviderProps {
-    children: ReactNode
-}
+// interface ContextProviderProps {
+//     children: ReactNode
+// }
 
-export const Context = createContext({} as itemsContext)
+// export const CartContext = createContext({} as Cartitems)
 
-export const ContextProvider = ({children}: ContextProviderProps) => {
+// export const ContextProvider = ({children}: ContextProviderProps) => {
 
-    return(
-        <ContextProvider>
-            {children}
-        </ContextProvider>
-    )
-}
+//     return(
+//         <CartContext.Provider value={}>
+//             {children}
+//         </CartContext.Provider>
+//     )
+// }

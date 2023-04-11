@@ -1,40 +1,23 @@
 import produce from "immer";
 import { ReactNode } from "react";
 import { ActionTypes } from "./actions";
-
-export interface Item {
-    id: string
-    name: string,
-    description:string,
-    category: string,
-    value: string,
-    img: ReactNode,
-    amount: number,
-}
+import { Coffee } from "../components/CoffeeCard";
 
 interface ItemState{
-    Items: Item[]
-    idActiveinCart: string | null
-    amountCart: number
+    coffee: Coffee[]
 }
 
 export const ItemsReducer = (state: ItemState, action: any) => { 
     switch (action.type){
         case ActionTypes.ADD_ITEM_IN_CART: {
             return produce(state, draft => {
-                draft.Items.push(action.payload.newItem)
-                draft.idActiveinCart = action.payload.newItem.id
+                draft.coffee.push(action.payload)
             })
         }
         case ActionTypes.REMOVE_ITEM_IN_CART: {
             return produce(state, draft => {
-                draft.Items.push(action.payload.newItem)
-            })
-        }
-        case ActionTypes.SUM_AMOUNT_FOR_ITEM_IN_CART: {
-            return produce(state, draft => {
-                draft.Items.push(action.payload.newItem)
-                draft.amountCart = (action.payload.newItem.amount)
+                draft.coffee.indexOf(action.payload)
+                state.coffee.splice(action.payload)
             })
         }
     }
