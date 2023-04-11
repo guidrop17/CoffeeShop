@@ -1,10 +1,12 @@
 import styled from "styled-components"
+import Background from "../../assets/Background.png"
 
 export const BannerContainer = styled.section(() => ({
     display: "flex",
     padding: '5.875rem 10rem 6.75rem 10rem',
     justifyContent: "center",
     gap: '3.5rem',
+    background:`url(${Background})`,
 }))
 
 export const BannerContentText = styled.div(({}) => ({
@@ -17,14 +19,31 @@ export const BannerTitle = styled.h1(({ theme }) => ({
     fontSize: '3rem',
     lineHeight: '130%',
     fontFamily: theme.fonts.title,
+    color: theme.color["base-title"]
 }))
 
-export const BannerSubTitle = styled.p(() => ({
+export const BannerSubTitle = styled.p(({ theme }) => ({
     fontSize: '1.25rem',
     lineHeight: '130%',
+    color: theme.color["base-subtitle"]
 }))
 
-export const BannerImage = styled.img(() => ({}))
+export const BannerImage = styled.img(({ theme }) => ({
+    position: "absolute",
+    zIndex: '-1',
+    opacity: '0.2',
+    width: '416px',
+    height: '300px',
+
+    [theme.mediaScreen.lg]: {
+        display: 'flex',
+        position: "relative",
+        zIndex: '1',
+        opacity: '1',
+        width: '476px',
+        height: '360px',        
+    }
+}))
 
 export const BannerContainerBenefits = styled.div(({}) => ({
     display: 'grid',

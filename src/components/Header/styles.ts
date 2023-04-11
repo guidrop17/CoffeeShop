@@ -1,10 +1,14 @@
 import styled from 'styled-components'
 
-export const HeaderContainer = styled.header(() => ({
+interface HeaderProps {
+    home: boolean
+}
+
+export const HeaderContainer = styled.header<HeaderProps>(({ home }) => ({
     justifyContent: 'space-between',
     display: 'flex',
     padding: '2rem 10rem',
-    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+    boxShadow: home ? '0px 4px 4px rgba(0, 0, 0, 0.25)' : 'none',
 }))
 
 export const Logo = styled.img(() => ({}))

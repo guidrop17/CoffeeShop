@@ -39,9 +39,13 @@ export const CoffeCard = ({coffee}: ProductsProps) => {
                 <img src={coffee.photo}/>
             </S.Image>
             <S.Category>
-                <S.Tag>
-                    {coffee.category}
-                </S.Tag>
+                {coffee.category.map((tag) => {
+                    return (
+                        <S.Tag key={`${coffee.id}${coffee.category}`}> 
+                            {tag}
+                        </S.Tag>
+                    )
+                })}
             </S.Category>                             
             <S.ProductsTitle>
                 {coffee.name}
@@ -49,6 +53,7 @@ export const CoffeCard = ({coffee}: ProductsProps) => {
             <S.Description>
                 {coffee.description}
             </S.Description>
+            
             <S.CountContainer>
                 <S.Price><span>R$</span>{coffee.price}</S.Price>
                 <div>

@@ -112,7 +112,7 @@ export const Coffees = [
         id: 12,
         category: ["especial"],
         name: "Havaiano",
-        description: "Bebida adocicada preparada com café e leite de coco",
+        description: "Uma bebida adocicada preparada com café e leite de coco",
         photo: Havaiano,
         price: 9.90,
     },

@@ -6,24 +6,39 @@ export const Products = styled.section(({}) => ({
 }))
 
 export const Title = styled.h2(({ theme }) => ({
-    width: '193px',
-    height: '42px',
-    left: 'calc(50% - 193px/2 - 463.5px)',
-    top: '32px',
-
     fontFamily: theme.fonts.title,
     fontWeight: '800',
     fontSize: theme.textSizes["title-title-l"],
     lineHeight: '130%',
+    justifyContent: 'center',
     
     display: 'flex',
     alignItems: 'center',
+
+    [theme.mediaScreen.md]: {
+        gridTemplateColumns: '1fr 1fr',
+    },
+    [theme.mediaScreen.lg]: {
+        justifyContent: 'start',
+        gridTemplateColumns: '1fr 1fr 1fr 1fr',
+    }
 }))
 
-export const Container = styled.div(({}) => ({
+export const Container = styled.div(({ theme }) => ({
     display: "grid",
-    gridTemplateColumns: '1fr 1fr 1fr 1fr ',
+    gridTemplateColumns: '1fr',
     flexDirection: 'column',
+    justifyContent: 'center',
     paddingTop: '3.375rem',
     gap: '2.125rem',
+
+    [theme.mediaScreen.md]: {
+        gridTemplateColumns: '1fr 1fr',
+    },
+    [theme.mediaScreen.lg]: {
+        gridTemplateColumns: '1fr 1fr 1fr',
+    },
+    [theme.mediaScreen.xl]: {
+        gridTemplateColumns: '1fr 1fr 1fr 1fr',
+    }
 }))

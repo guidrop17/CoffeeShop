@@ -2,8 +2,7 @@ import styled from "styled-components"
 
 export const Card = styled.div(({ theme }) => ({
     padding:'0 1.5rem 1.25rem 1.5rem',
-    width: '256px',
-    height: '310px',
+    maxWidth: '260px',
     background: theme.color["base-card"],
     borderRadius: '6px 36px',
 }))
@@ -98,7 +97,7 @@ export const CountContainer = styled.div(({ theme }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     gap: '1.45rem',
-    marginTop:'2rem',
+    margin:'2rem 0 0.15rem 0',
 
     div: {
         gap: '0.5rem',

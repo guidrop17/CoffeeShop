@@ -3,7 +3,11 @@ import Logo from "../../assets/Logo.svg"
 import Cart from "../../assets/Cart.svg"
 import { MapPin } from "phosphor-react";
 
-export const Header = () => {
+interface HeaderProps {
+  homeHeader: boolean
+}
+
+export const Header = ({homeHeader}: HeaderProps) => {
     const handleLocalization = () => {
         return navigator.geolocation.getCurrentPosition(location => {
           const { latitude, longitude } = location.coords;
@@ -22,7 +26,7 @@ export const Header = () => {
       };
 
     return(
-        <S.HeaderContainer>
+        <S.HeaderContainer home={homeHeader}>
             <S.Logo src={Logo}/>
             <S.ContainerActions>
                 <S.LocalizationInfo 

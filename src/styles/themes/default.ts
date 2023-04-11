@@ -39,5 +39,12 @@ export const defaultTheme = {
     fonts: {
         regular: "'Roboto', 'sans-serif'",
         title: "'Baloo 2', 'cursive'",
-    },
+    },  
+    mediaScreen: {
+        xs: "@media (min-width: 319px)",
+        sm: "@media (min-width: 424px)",
+        md: "@media (min-width: 767px)",
+        lg: "@media (min-width: 1023px)",
+        xl: "@media (min-width: 1439px)",
+    }
 }

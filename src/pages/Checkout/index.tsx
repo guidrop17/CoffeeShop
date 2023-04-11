@@ -1,11 +1,11 @@
-import { Banner } from "../../components/Banner"
+import { AddressInfo } from "../../components/AddressInfo"
 import { Products } from "../../components/Products"
 
 export const Checkout = () => {
     return (
         <>
-            <Banner/>
-            <Products/>
+            <AddressInfo/>
+            {/* <Products/> */}
         </>
     )
 }

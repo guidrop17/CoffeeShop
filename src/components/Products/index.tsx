@@ -7,7 +7,6 @@ export const Products = ()  => {
     return (
         <S.Products>
             <S.Title>Nossos cafés</S.Title>
-
             <S.Container>
                 {Coffees.map((coffee) => {
                     return (
