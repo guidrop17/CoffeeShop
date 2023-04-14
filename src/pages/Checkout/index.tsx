@@ -1,11 +1,11 @@
-import { AddressInfo } from "../../components/AddressInfo"
-import { Products } from "../../components/Products"
+import { AddressInfo } from "../../components/CartPage/AddressInfo"
+import { PaymentInfo } from "../../components/CartPage/PaymentInfo"
 
 export const Checkout = () => {
     return (
         <>
             <AddressInfo/>
-            {/* <Products/> */}
+            <PaymentInfo/>
         </>
     )
 }

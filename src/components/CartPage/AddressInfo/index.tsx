@@ -1,6 +1,8 @@
 import { MapPinLine } from "phosphor-react"
 import * as S from "./styles"
 import { useForm, SubmitHandler } from "react-hook-form";
+import { TitleContainer } from "../TitleContainer";
+import { Container } from "../Container";
 
 interface AddressProps {
     cep: string;
@@ -19,18 +21,12 @@ export const AddressInfo = () => {
     console.log(watch("cep"))
 
     return (
-        <S.AddressContainer>
-            <S.InfoContainer>
-                <MapPinLine color='#C47F17' size={22} />
-                <S.TitleContent>
-                    <S.Title>
-                        Endereço de Entrega
-                    </S.Title>
-                    <S.SubTitle>
-                        Informe o endereço onde deseja receber seu pedido
-                    </S.SubTitle>
-                </S.TitleContent>
-            </S.InfoContainer>
+        <Container>
+            <TitleContainer 
+            icon={<MapPinLine color='#C47F17' size={22} />} 
+            title="Endereço de Entrega"
+            subTitle="Informe o endereço onde deseja receber seu pedido" 
+            />
             <S.FormAddress>
                 <S.InputAddress 
                     placeholder="CEP" 
@@ -74,6 +70,6 @@ export const AddressInfo = () => {
                     {...register("state", { required: true })}
                 />
             </S.FormAddress>
-        </S.AddressContainer>
+        </Container>
     )
 }

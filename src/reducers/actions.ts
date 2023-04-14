@@ -1,4 +1,4 @@
-import { Coffee } from "../components/CoffeeCard"
+import { Coffee } from "../components/HomePage/CoffeeCard"
 
 
 export enum ActionTypes {

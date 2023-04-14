@@ -1,8 +1,8 @@
-import { ReactNode, useState } from "react"
+import { useState } from "react"
 import * as S from './styles'
-import { CountAmount } from '../CountAmount';
+import { CountAmount } from '../../CountAmount';
 import { ShoppingCart } from "phosphor-react";
-import { AddItemInCartAction } from "../../reducers/actions";
+import { AddItemInCartAction } from "../../../reducers/actions";
 
 export interface Coffee {
     id: number
@@ -28,11 +28,11 @@ export const CoffeCard = ({coffee}: ProductsProps) => {
     }
     const handleAddToCart = () => {
         const coffeeToAdd = {
-          ...coffee,
-          quantity: 1,
+            ...coffee,
+            quantity: 1,
         };
         AddItemInCartAction(coffeeToAdd);
-      }
+    }
     return (
         <S.Card>
             <S.Image>

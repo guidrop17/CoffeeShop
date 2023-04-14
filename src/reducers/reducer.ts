@@ -1,7 +1,7 @@
 import produce from "immer";
 import { ReactNode } from "react";
 import { ActionTypes } from "./actions";
-import { Coffee } from "../components/CoffeeCard";
+import { Coffee } from "../components/HomePage/CoffeeCard";
 
 interface ItemState{
     coffee: Coffee[]

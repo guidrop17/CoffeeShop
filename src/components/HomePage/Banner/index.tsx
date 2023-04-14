@@ -1,6 +1,5 @@
 import * as S from "./styles"
-import CoffeeHome from "../../assets/CoffeeHome.svg"
-import Background from "../../assets/Background.png"
+import CoffeeHome from "../../../assets/CoffeeHome.svg"
 import { Benefits } from "./constants"
 
 

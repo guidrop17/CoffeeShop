@@ -1,5 +1,4 @@
-// import { Context } from '../../context/Context';
-import { Coffees } from '../../data/data'
+import { Coffees } from '../../../data/data'
 import { CoffeCard } from '../CoffeeCard'
 import * as S from './styles'
 
